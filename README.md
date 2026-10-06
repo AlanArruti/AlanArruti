@@ -25,6 +25,15 @@
 
 ---
 
+### 📊 Lenguajes más usados
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AlanArruti/AlanArruti/main/languages-dark.svg">
+  <img alt="Lenguajes más usados en mis repositorios, incluidos los privados" src="https://raw.githubusercontent.com/AlanArruti/AlanArruti/main/languages-light.svg">
+</picture>
+
+---
+
 ### 📫 Contacto
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arrutialan@gmail.com)
