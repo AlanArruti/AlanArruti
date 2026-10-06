@@ -1,0 +1,59 @@
+# Genera assets/languages-*.svg con el porcentaje de lenguajes de mis repos,
+# incluyendo los privados (por ejemplo, el de Sentinel).
+#
+# Configuración (Settings → Secrets and variables → Actions):
+#   Secrets
+#     STATS_TOKEN        token personal con acceso de lectura a mis repos privados
+#     EXTRA_REPOS        repos que no son míos, "owner/nombre" separados por coma
+#     EXTRA_REPOS_TOKEN  (opcional) otro token para EXTRA_REPOS, si STATS_TOKEN no los ve
+#   Variables (opcionales)
+#     EXCLUDE_REPOS, EXCLUDE_LANGS, TOP_LANGS
+#
+# EXTRA_REPOS va como secret para que el nombre del repo privado no aparezca en los logs.
+
+name: Estadísticas de lenguajes
+
+on:
+  schedule:
+    - cron: "23 6 * * *" # todos los días a las 03:23 (hora de Argentina)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/scripts/languages.py
+      - .github/workflows/languages.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: languages
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Generar tarjetas SVG
+        run: python3 .github/scripts/languages.py
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+          EXTRA_REPOS: ${{ secrets.EXTRA_REPOS }}
+          EXTRA_REPOS_TOKEN: ${{ secrets.EXTRA_REPOS_TOKEN }}
+          EXCLUDE_REPOS: ${{ vars.EXCLUDE_REPOS }}
+          EXCLUDE_LANGS: ${{ vars.EXCLUDE_LANGS }}
+          TOP_LANGS: ${{ vars.TOP_LANGS }}
+
+      - name: Commitear si cambiaron
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          if git diff --cached --quiet; then
+            echo "Las estadísticas no cambiaron."
+          else
+            git commit -m "Actualizar estadísticas de lenguajes"
+            git push
+          fi

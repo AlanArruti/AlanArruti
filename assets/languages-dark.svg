@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="115" viewBox="0 0 495 115" role="img" aria-labelledby="title">
+<title id="title">Lenguajes más usados</title>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+  .title { font-size: 18px; font-weight: 600; fill: #f0f6fc; }
+  .lang { font-size: 13px; font-weight: 500; fill: #f0f6fc; }
+  .percent { font-size: 13px; font-weight: 400; fill: #9198a1; }
+</style>
+<defs><clipPath id="bar"><rect x="25" y="52" width="445" height="8" rx="4"/></clipPath></defs>
+<rect x="0.5" y="0.5" width="494" height="114" rx="6" fill="#0d1117" stroke="#3d444d"/>
+<text x="25" y="35" class="title">Lenguajes más usados</text>
+<text x="25" y="75" class="percent">Todavía no hay datos: ejecutá el workflow.</text>
+</svg>

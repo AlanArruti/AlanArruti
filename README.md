@@ -25,6 +25,17 @@
 
 ---
 
+### 📊 Lenguajes más usados
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+  <img alt="Porcentaje de lenguajes usados en mis repositorios públicos y privados" src="assets/languages-light.svg">
+</picture>
+
+<sub>Se actualiza todos los días con GitHub Actions e incluye repositorios privados.</sub>
+
+---
+
 ### 📫 Contacto
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arrutialan@gmail.com)
