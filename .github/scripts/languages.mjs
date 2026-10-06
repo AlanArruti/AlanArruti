@@ -19,7 +19,6 @@ const QUERY = `query ($cursor: String) {
     repositories(first: 100, after: $cursor, isFork: false, ownerAffiliations: [OWNER, COLLABORATOR]) {
       pageInfo { hasNextPage endCursor }
       nodes {
-        isPrivate
         languages(first: 50, orderBy: { field: SIZE, direction: DESC }) {
           edges { size node { name color } }
         }
@@ -40,16 +39,11 @@ async function graphql(variables) {
 }
 
 const totals = new Map();
-let repoCount = 0;
-let privateCount = 0;
 let cursor = null;
 do {
   const { repositories } = (await graphql({ cursor })).viewer;
   for (const repo of repositories.nodes) {
     const edges = repo.languages.edges.filter((e) => !EXCLUDE.has(e.node.name.toLowerCase()));
-    if (!edges.length) continue;
-    repoCount++;
-    if (repo.isPrivate) privateCount++;
     for (const { size, node } of edges) {
       const lang = totals.get(node.name) ?? { name: node.name, color: node.color, size: 0 };
       lang.size += size;
@@ -80,10 +74,10 @@ const pct = (share) => (share < 0.001 ? '<0.1%' : `${(share * 100).toFixed(1)}%`
 function render(theme) {
   const W = 480;
   const GAP = 2;
-  const BAR_Y = 30;
+  const BAR_Y = 4;
   const BAR_H = 10;
   const ROW_H = 24;
-  const LEGEND_Y = 70;
+  const LEGEND_Y = 44;
   const colW = W / 2;
   const rows = Math.ceil(items.length / 2);
   const H = LEGEND_Y + (rows - 1) * ROW_H + 8;
@@ -110,22 +104,17 @@ function render(theme) {
     ].join('');
   });
 
-  const repos = repoCount === 1 ? '1 repositorio' : `${repoCount} repositorios`;
-  const privates = privateCount === 1 ? '1 privado' : `${privateCount} privados`;
-  const subtitle = `Según bytes de código en ${repos} (${privates})`;
   const desc = items.map((item) => `${item.name} ${pct(item.share)}`).join(', ');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
 <title id="title">Lenguajes más usados</title>
-<desc id="desc">${esc(subtitle)}: ${esc(desc)}</desc>
+<desc id="desc">${esc(desc)}</desc>
 <style>
 text { font-family: ${FONT}; }
-.sub { font-size: 12px; fill: ${theme.muted}; }
 .name { font-size: 13px; fill: ${theme.text}; }
 .pct { font-size: 13px; fill: ${theme.muted}; font-variant-numeric: tabular-nums; }
 </style>
 <defs><clipPath id="bar"><rect x="0" y="${BAR_Y}" width="${W}" height="${BAR_H}" rx="4"/></clipPath></defs>
-<text x="0" y="14" class="sub">${esc(subtitle)}</text>
 <g clip-path="url(#bar)">${segments.join('')}</g>
 ${legend.join('\n')}
 </svg>
@@ -134,4 +123,4 @@ ${legend.join('\n')}
 
 writeFileSync('languages-light.svg', render(THEMES.light));
 writeFileSync('languages-dark.svg', render(THEMES.dark));
-console.log(`${repoCount} repos (${privateCount} privados): ${items.map((i) => `${i.name} ${pct(i.share)}`).join(', ')}`);
+console.log(items.map((i) => `${i.name} ${pct(i.share)}`).join(', '));
