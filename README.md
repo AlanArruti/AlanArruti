@@ -1,12 +1,12 @@
-# Hola, soy Alan Arruti 👋
+# Hola, soy Alan Arruti
 
 **Estudiante avanzado de la Tecnicatura en Programación** en la [UTN Mar del Plata](https://www.frt.utn.edu.ar/) y **Desarrollador Junior** en **Sentine.la**.
 
 ---
 
-### 🚀 Sobre mí
+###  Sobre mí
 
-- 🧠 Enfocado en arquitectura de software, patrones de diseño y buenas prácticas
+- 🧠 Enfocado en Arquitectura de Software, Patrones de diseño, IA, Machine Learning y Computer Vision
 - 📍 Lobería/Mar del Plata, Argentina
 
 ---
