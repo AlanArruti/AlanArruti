@@ -1,6 +1,6 @@
 # Hola, soy Alan Arruti
 
-**Estudiante avanzado de la Tecnicatura en Programación** en la [UTN Mar del Plata](https://www.frt.utn.edu.ar/) y **Desarrollador Junior** en **Sentine.la**.
+**Estudiante avanzado de la Tecnicatura en Programación** en la [UTN Mar del Plata](https://mdp.utn.edu.ar/) y **Desarrollador Junior** en **Sentine.la**.
 
 ---
 
