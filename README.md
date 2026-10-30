@@ -3,8 +3,6 @@
 **Desarrollador en [Sentine.la](#-sentinel)** — visión por computadora, IA aplicada y backend Java.
 Estudiante avanzado de la **Tecnicatura en Programación** en la [UTN Mar del Plata](https://mdp.utn.edu.ar/) (finalizo en diciembre de 2026).
 
-Me muevo en todo el stack: del modelo de detección a la base de datos y al dashboard. Me gusta tomar decisiones con datos: mido antes de optimizar.
-
 📍 Lobería / Mar del Plata, Argentina
 
 ---
@@ -25,8 +23,8 @@ Plataforma de videoanálisis con IA para múltiples clientes y cámaras (repo pr
 
 | Proyecto | Qué es | Stack |
 |---|---|---|
-| [**BAN Sports**](https://github.com/AlanArruti/E-commerce_BANSports) | E-commerce full stack de suplementos. Trabajo final de Programación III y IV, nota 10 | Java 21, Spring Boot, JWT, PostgreSQL, MercadoPago, Angular, Docker |
-| [**Gestor de Oficios**](https://github.com/AlanArruti/ServiceHub) | Sistema de contratación de oficios con roles. Trabajo final de Programación II, nota 10 | Java (POO), JSON |
+| [**BAN Sports**](https://github.com/AlanArruti/E-commerce_BANSports) | E-commerce full stack de suplementos. Trabajo final de Programación III y IV | Java 21, Spring Boot, JWT, PostgreSQL, MercadoPago, Angular, Docker |
+| [**Gestor de Oficios**](https://github.com/AlanArruti/ServiceHub) | Sistema de contratación de oficios con roles. Trabajo final de Programación II | Java (POO), JSON |
 | **Turnera** | SaaS de reserva de turnos para varios negocios (repo privado) | Next.js, Fastify, Prisma, PostgreSQL |
 
 ---
