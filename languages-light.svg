@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="148" viewBox="0 0 480 148" role="img" aria-labelledby="title desc">
 <title id="title">Lenguajes más usados</title>
-<desc id="desc">TypeScript 32.2%, Python 23.9%, Java 21.2%, C++ 10.5%, HTML 3.8%, CSS 2.9%, JavaScript 2.7%, PLpgSQL 1.6%, Otros 1.2%</desc>
+<desc id="desc">TypeScript 32.0%, Java 22.2%, Python 21.2%, C++ 9.3%, HTML 5.9%, CSS 4.5%, JavaScript 2.4%, PLpgSQL 1.4%, Otros 1.0%</desc>
 <style>
 text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
 .name { font-size: 13px; fill: #1f2328; }
 .pct { font-size: 13px; fill: #59636e; font-variant-numeric: tabular-nums; }
 </style>
 <defs><clipPath id="bar"><rect x="0" y="4" width="480" height="10" rx="4"/></clipPath></defs>
-<g clip-path="url(#bar)"><rect x="0.00" y="4" width="149.30" height="10" fill="#3178c6"/><rect x="151.30" y="4" width="110.97" height="10" fill="#3572A5"/><rect x="264.26" y="4" width="98.24" height="10" fill="#b07219"/><rect x="364.50" y="4" width="48.85" height="10" fill="#f34b7d"/><rect x="415.35" y="4" width="17.52" height="10" fill="#e34c26"/><rect x="434.86" y="4" width="13.64" height="10" fill="#663399"/><rect x="450.50" y="4" width="12.46" height="10" fill="#f1e05a"/><rect x="464.96" y="4" width="7.55" height="10" fill="#336790"/><rect x="474.51" y="4" width="5.49" height="10" fill="#818b98"/></g>
-<circle cx="5" cy="39.5" r="5" fill="#3178c6"/><text x="18" y="44" class="name">TypeScript</text><text x="216" y="44" class="pct" text-anchor="end">32.2%</text>
-<circle cx="5" cy="63.5" r="5" fill="#3572A5"/><text x="18" y="68" class="name">Python</text><text x="216" y="68" class="pct" text-anchor="end">23.9%</text>
-<circle cx="5" cy="87.5" r="5" fill="#b07219"/><text x="18" y="92" class="name">Java</text><text x="216" y="92" class="pct" text-anchor="end">21.2%</text>
-<circle cx="5" cy="111.5" r="5" fill="#f34b7d"/><text x="18" y="116" class="name">C++</text><text x="216" y="116" class="pct" text-anchor="end">10.5%</text>
-<circle cx="5" cy="135.5" r="5" fill="#e34c26"/><text x="18" y="140" class="name">HTML</text><text x="216" y="140" class="pct" text-anchor="end">3.8%</text>
-<circle cx="257" cy="39.5" r="5" fill="#663399"/><text x="270" y="44" class="name">CSS</text><text x="468" y="44" class="pct" text-anchor="end">2.9%</text>
-<circle cx="257" cy="63.5" r="5" fill="#f1e05a"/><text x="270" y="68" class="name">JavaScript</text><text x="468" y="68" class="pct" text-anchor="end">2.7%</text>
-<circle cx="257" cy="87.5" r="5" fill="#336790"/><text x="270" y="92" class="name">PLpgSQL</text><text x="468" y="92" class="pct" text-anchor="end">1.6%</text>
-<circle cx="257" cy="111.5" r="5" fill="#818b98"/><text x="270" y="116" class="name">Otros</text><text x="468" y="116" class="pct" text-anchor="end">1.2%</text>
+<g clip-path="url(#bar)"><rect x="0.00" y="4" width="148.65" height="10" fill="#3178c6"/><rect x="150.65" y="4" width="103.21" height="10" fill="#b07219"/><rect x="255.86" y="4" width="98.47" height="10" fill="#3572A5"/><rect x="356.33" y="4" width="42.99" height="10" fill="#f34b7d"/><rect x="401.32" y="4" width="27.45" height="10" fill="#e34c26"/><rect x="430.77" y="4" width="20.92" height="10" fill="#663399"/><rect x="453.69" y="4" width="11.07" height="10" fill="#f1e05a"/><rect x="466.75" y="4" width="6.39" height="10" fill="#336790"/><rect x="475.14" y="4" width="4.86" height="10" fill="#818b98"/></g>
+<circle cx="5" cy="39.5" r="5" fill="#3178c6"/><text x="18" y="44" class="name">TypeScript</text><text x="216" y="44" class="pct" text-anchor="end">32.0%</text>
+<circle cx="5" cy="63.5" r="5" fill="#b07219"/><text x="18" y="68" class="name">Java</text><text x="216" y="68" class="pct" text-anchor="end">22.2%</text>
+<circle cx="5" cy="87.5" r="5" fill="#3572A5"/><text x="18" y="92" class="name">Python</text><text x="216" y="92" class="pct" text-anchor="end">21.2%</text>
+<circle cx="5" cy="111.5" r="5" fill="#f34b7d"/><text x="18" y="116" class="name">C++</text><text x="216" y="116" class="pct" text-anchor="end">9.3%</text>
+<circle cx="5" cy="135.5" r="5" fill="#e34c26"/><text x="18" y="140" class="name">HTML</text><text x="216" y="140" class="pct" text-anchor="end">5.9%</text>
+<circle cx="257" cy="39.5" r="5" fill="#663399"/><text x="270" y="44" class="name">CSS</text><text x="468" y="44" class="pct" text-anchor="end">4.5%</text>
+<circle cx="257" cy="63.5" r="5" fill="#f1e05a"/><text x="270" y="68" class="name">JavaScript</text><text x="468" y="68" class="pct" text-anchor="end">2.4%</text>
+<circle cx="257" cy="87.5" r="5" fill="#336790"/><text x="270" y="92" class="name">PLpgSQL</text><text x="468" y="92" class="pct" text-anchor="end">1.4%</text>
+<circle cx="257" cy="111.5" r="5" fill="#818b98"/><text x="270" y="116" class="name">Otros</text><text x="468" y="116" class="pct" text-anchor="end">1.0%</text>
 </svg>
